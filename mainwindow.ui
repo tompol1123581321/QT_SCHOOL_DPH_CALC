@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>391</width>
-    <height>268</height>
+    <width>676</width>
+    <height>443</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -65,6 +65,9 @@
            <property name="text">
             <string>21</string>
            </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
          <item>
@@ -100,7 +103,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>391</width>
+     <width>676</width>
      <height>21</height>
     </rect>
    </property>
@@ -108,7 +111,20 @@
     <property name="title">
      <string>File</string>
     </property>
+    <widget class="QMenu" name="menulanguage">
+     <property name="title">
+      <string>language</string>
+     </property>
+     <addaction name="separator"/>
+     <addaction name="separator"/>
+     <addaction name="separator"/>
+     <addaction name="separator"/>
+     <addaction name="actioncs"/>
+     <addaction name="actionen"/>
+    </widget>
     <addaction name="actionQuit"/>
+    <addaction name="menulanguage"/>
+    <addaction name="separator"/>
    </widget>
    <addaction name="menuFile"/>
   </widget>
@@ -116,6 +132,22 @@
   <action name="actionQuit">
    <property name="text">
     <string>Quit</string>
+   </property>
+  </action>
+  <action name="actioncs">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>cs</string>
+   </property>
+  </action>
+  <action name="actionen">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>en</string>
    </property>
   </action>
  </widget>

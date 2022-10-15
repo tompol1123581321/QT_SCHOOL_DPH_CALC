@@ -20,6 +20,14 @@ private slots:
 
     void on_pushButtonEval_clicked();
 
+    void on_rb21_clicked();
+
+    void on_rb15_clicked();
+
+    void on_actioncs_triggered();
+
+    void on_actionen_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
