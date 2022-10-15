@@ -23,12 +23,15 @@ MainWindow::MainWindow(QWidget *parent)
     QString lang = set.value("lang","cs").toString();
 
     if(lang=="cs"){
+
         ui-> actioncs ->setChecked(true);
         ui -> actionen -> setChecked(false);
+
     }
     else {
         ui-> actioncs ->setChecked(false);
         ui -> actionen -> setChecked(true);
+
     }
 
 
@@ -93,6 +96,12 @@ void MainWindow::on_actioncs_triggered()
     QSettings set;
     set.setValue("lang","cs");
        ui -> actionen ->setChecked(false);
+       qApp -> removeTranslator(&translator);
+       ui -> retranslateUi(this);
+       qApp -> installTranslator(&translator);
+       translator.load(":/lang/trans_cs.qm");
+       ui -> retranslateUi(this);
+
 }
 
 
@@ -101,5 +110,10 @@ void MainWindow::on_actionen_triggered()
     QSettings set;
     set.setValue("lang","en");
     ui -> actioncs ->setChecked(false);
+    qApp -> removeTranslator(&translator);
+    ui -> retranslateUi(this);
+    qApp -> installTranslator(&translator);
+    translator.load(":/lang/trans_en.qm");
+    ui -> retranslateUi(this);
 }
 
