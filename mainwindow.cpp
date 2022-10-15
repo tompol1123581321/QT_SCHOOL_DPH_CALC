@@ -32,8 +32,13 @@ void MainWindow::on_pushButtonEval_clicked()
         }
         else{
             value*=1.21;}
+         ui -> withTax -> setText(tr("%1 EUR").arg(value));
 
     }
-    ui -> withTax -> setText(tr("%1 EUR").arg(value));
+    else{
+        ui -> withTax -> setText("NaN");
+    }
+
+
 }
 
